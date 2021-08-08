@@ -45,7 +45,7 @@ export default {
         #logo {
             display: inline-block;
 
-            font-family: Acme;
+            font-family: "Fira Sans";
             font-size: 24pt;
 
             vertical-align: middle;

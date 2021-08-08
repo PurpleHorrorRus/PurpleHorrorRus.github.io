@@ -32,7 +32,7 @@ module.exports = {
             },
             {
                 rel: "stylesheet",
-                href: "https://fonts.googleapis.com/css2?family=Acme&display=swap"
+                href: "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap"
             }
         ]
     },

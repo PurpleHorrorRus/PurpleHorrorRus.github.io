@@ -15,7 +15,7 @@ export default {};
     padding: 10px;
 
     #logo {
-        font-family: Acme;
+        font-family: "Fira Sans";
         font-size: 24pt;
     }
 
