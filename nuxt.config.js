@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
+    ssr: false,
     target: "static",
     telemetry: false,
     router: {
@@ -35,18 +36,6 @@ module.exports = {
                 href: "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap"
             }
         ]
-    },
-    build: {
-        extend (config) {
-            config.module.rules.push(
-                {
-                    test: /\.s[ac]ss$/i,
-                    use: [
-                        "sass-loader"
-                    ]
-                }
-            );
-        }
     },
     buildModules: [
         "@nuxtjs/google-analytics"
