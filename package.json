@@ -14,23 +14,23 @@
     "deploy": "cross-env NODE_ENV=production nuxt generate && push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@nuxtjs/sitemap": "^2.4.0",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.15.8",
     "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
-    "eslint": "^7.30.0",
+    "eslint": "^7.32.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-vue": "^7.12.1",
+    "eslint-plugin-vue": "^7.16.0",
     "gh-pages": "^3.2.3",
     "push-dir": "^0.4.1",
-    "sass": "^1.35.1",
+    "sass": "^1.38.0",
     "sass-loader": "10.1.1"
   }
 }
