@@ -5,7 +5,7 @@
             <font-awesome-icon id="download-icons-windows" :icon="['fab', 'windows']" />
         </a>
 
-        <a :href="link('deb')">
+        <a :href="link('tar.gz')">
             <font-awesome-icon id="download-icons-linux" :icon="['fab', 'linux']" />
         </a>
     </div>
