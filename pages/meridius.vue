@@ -82,6 +82,9 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
+
+            padding-top: 10px;
 
             #MeridiusScreenshot {
                 width: 650px;
