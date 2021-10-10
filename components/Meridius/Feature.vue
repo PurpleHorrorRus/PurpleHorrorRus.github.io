@@ -22,24 +22,12 @@ export default {
 .feature {
     display: grid;
     grid-template-columns: 40px 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "icon label";
 
     margin-bottom: 10px;
 
     font-size: 14pt;
 
-    .feature-label {
-        grid-area: label;
-        display: inline-block;
-    }
-
     .feature-icon {
-        grid-area: icon;
-        display: block;
-        width: 100%;
-        text-align: center;
-
         svg {
             color: #fff;
         }
