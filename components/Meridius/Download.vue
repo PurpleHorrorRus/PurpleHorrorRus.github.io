@@ -2,11 +2,17 @@
     <div id="download-icons">
         <span id="download-icons-label" v-text="'Скачать: '" />
         <a :href="link('exe')">
-            <font-awesome-icon id="download-icons-windows" :icon="['fab', 'windows']" />
+            <font-awesome-icon
+                id="download-icons-windows"
+                :icon="['fab', 'windows']"
+            />
         </a>
 
         <a :href="link('tar.gz')">
-            <font-awesome-icon id="download-icons-linux" :icon="['fab', 'linux']" />
+            <font-awesome-icon
+                id="download-icons-linux"
+                :icon="['fab', 'linux']"
+            />
         </a>
     </div>
 </template>
@@ -14,7 +20,7 @@
 <script>
 export default {
     data: () => ({
-        version: "2.1.5"
+        version: "2.1.6"
     }),
     methods: {
         link(ext) {
