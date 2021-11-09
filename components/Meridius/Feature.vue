@@ -1,7 +1,10 @@
 <template>
     <div class="feature">
         <div class="feature-icon">
-            <font-awesome-icon :icon="feature.icon" :style="{ color: feature.color || '#fff' }" />
+            <FontAwesomeIcon
+                :icon="feature.icon"
+                :style="{ color: feature.color || '#fff' }"
+            />
         </div>
         <span class="feature-label" v-text="feature.text" />
     </div>
