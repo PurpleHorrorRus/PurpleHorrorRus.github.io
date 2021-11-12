@@ -39,23 +39,23 @@ export default {
     &-name {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        column-gap: 2vw;
 
         width: 50%;
 
         &-Infinite,
         &-Horror {
             font-family: "Arisawa-Kaisho";
-            font-size: 72pt;
+            font-size: 6vw;
         }
 
         &-Infinite {
-            letter-spacing: -20px;
+            letter-spacing: -1.3vw;
         }
 
         &-Horror {
             color: #ff0000;
-            letter-spacing: -15px;
+            letter-spacing: -1vw;
         }
     }
 
