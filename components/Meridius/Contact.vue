@@ -2,13 +2,13 @@
     <div id="contact">
         <span id="contact-label" v-text="'Обратная связь с разработчиком:'" />
         <a href="https://vk.com/id529592613">
-            <FontAwesomeIcon id="vk-icon" :icon="['fab', 'vk']" />
+            <font-awesome-icon id="vk-icon" :icon="['fab', 'vk']" />
         </a>
         <a href="https://github.com/PurpleHorrorRus">
-            <FontAwesomeIcon id="github-icon" :icon="['fab', 'github']" />
+            <font-awesome-icon id="github-icon" :icon="['fab', 'github']" />
         </a>
         <a href="https://twitch.tv/infinitehorror">
-            <FontAwesomeIcon id="twitch-icon" :icon="['fab', 'twitch']" />
+            <font-awesome-icon id="twitch-icon" :icon="['fab', 'twitch']" />
         </a>
     </div>
 </template>

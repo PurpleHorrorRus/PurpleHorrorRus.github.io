@@ -1,7 +1,7 @@
 <template>
     <div class="feature">
         <div class="feature-icon">
-            <FontAwesomeIcon
+            <font-awesome-icon
                 :icon="feature.icon"
                 :style="{ color: feature.color || '#fff' }"
             />

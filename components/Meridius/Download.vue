@@ -2,14 +2,14 @@
     <div id="download-icons">
         <span id="download-icons-label" v-text="'Скачать: '" />
         <a :href="link('exe')">
-            <FontAwesomeIcon
+            <font-awesome-icon
                 id="download-icons-windows"
                 :icon="['fab', 'windows']"
             />
         </a>
 
         <a :href="link('deb')">
-            <FontAwesomeIcon
+            <font-awesome-icon
                 id="download-icons-linux"
                 :icon="['fab', 'linux']"
             />
