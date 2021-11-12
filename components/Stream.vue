@@ -1,6 +1,10 @@
 <template>
     <div id="main-page-container-content-stream">
-        <a id="main-page-container-content-stream-title" class="category" href="https://twitch.tv/InfiniteHorror/">
+        <a
+            id="main-page-container-content-stream-title"
+            class="category"
+            href="https://twitch.tv/InfiniteHorror/"
+        >
             <span
                 id="main-page-container-content-stream-title-text"
                 class="category-text"
@@ -14,24 +18,21 @@
 
 <script>
 export default {
-    head: {
+    head: () => ({
         script: [
             {
-                src: "https://player.twitch.tv/js/embed/v1.js"
+                src: "https://player.twitch.tv/js/embed/v1.js",
+                defer: true,
+                callback: () => {
+                    new Twitch.Player("twitch-embed", {
+                        channel: "infinitehorror",
+                        width: "100%",
+                        height: 530
+                    });
+                }
             }
         ]
-    },
-    mounted() {
-        try {
-            new Twitch.Player("twitch-embed", {
-                channel: "infinitehorror",
-                width: "100%",
-                height: 530
-            });
-        } catch (e) {
-            //
-        }
-    }
+    })
 };
 </script>
 
