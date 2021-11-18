@@ -20,7 +20,7 @@
 <script>
 export default {
     data: () => ({
-        version: "2.1.9"
+        version: "2.2.0"
     }),
     methods: {
         link(ext) {
