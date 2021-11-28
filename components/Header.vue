@@ -1,12 +1,24 @@
 <template>
     <div id="main-page-container-content-header">
         <div id="main-page-container-content-header-name">
-            <span id="main-page-container-content-header-name-Infinite" v-text="'Infinite'" />
-            <span id="main-page-container-content-header-name-Horror" v-text="'Horror'" />
+            <span
+                id="main-page-container-content-header-name-Infinite"
+                v-text="'Infinite'"
+            />
+            <span
+                id="main-page-container-content-header-name-Horror"
+                v-text="'Horror'"
+            />
         </div>
         <div id="main-page-container-content-header-welcome">
-            <span id="main-page-container-content-header-welcome-text" v-text="'Welcome to the Page'" />
-            <span id="main-page-container-content-header-welcome-wtc" v-text="wtc" />
+            <span
+                id="main-page-container-content-header-welcome-text"
+                v-text="'Welcome to the Page'"
+            />
+            <span
+                id="main-page-container-content-header-welcome-wtc"
+                v-text="wtc"
+            />
         </div>
     </div>
 </template>

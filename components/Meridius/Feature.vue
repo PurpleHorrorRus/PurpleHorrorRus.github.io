@@ -1,11 +1,10 @@
 <template>
     <div class="feature">
-        <div class="feature-icon">
-            <font-awesome-icon
-                :icon="feature.icon"
-                :style="{ color: feature.color || '#fff' }"
-            />
-        </div>
+        <Component
+            :is="require(`~/assets/icons/${feature.icon}.svg`)"
+            class="feature-icon"
+            :style="feature.style || {}"
+        />
         <span class="feature-label" v-text="feature.text" />
     </div>
 </template>
@@ -23,17 +22,18 @@ export default {
 
 <style lang="scss">
 .feature {
-    display: grid;
-    grid-template-columns: 40px 1fr;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 
-    margin-bottom: 10px;
+    &-icon {
+        width: 26px;
 
-    font-size: 14pt;
+        fill: #fff;
+    }
 
-    .feature-icon {
-        svg {
-            color: #fff;
-        }
+    &-text {
+        font-size: 18px;
     }
 }
 </style>

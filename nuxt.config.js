@@ -37,6 +37,25 @@ module.exports = {
             }
         ]
     },
+    build: {
+        extend(config) {
+            config.module.rules.find(rule => rule.test.test(".svg")).test = /\.(png|jpe?g|gif|webp)$/;
+            config.module.rules.push({
+                test: /\.svg$/,
+                use: [
+                    "babel-loader",
+                    {
+                        loader: "vue-svg-loader",
+                        options: {
+                            svgo: {
+                                plugins: [{ removeDimensions: true }, { removeViewBox: false }]
+                            }
+                        }
+                    }
+                ]
+            });
+        }
+    },
     buildModules: [
         "@nuxtjs/google-analytics"
     ],
@@ -48,21 +67,7 @@ module.exports = {
         }
     },
     modules: [
-        "@nuxtjs/sitemap",
-        [
-            "nuxt-fontawesome", {
-                imports: [
-                    {
-                        set: "@fortawesome/free-solid-svg-icons",
-                        icons: ["fas"]
-                    },
-                    {
-                        set: "@fortawesome/free-brands-svg-icons",
-                        icons: ["fab"]
-                    }
-                ]
-            }
-        ]
+        "@nuxtjs/sitemap"
     ],
     sitemap: {
         hostname: "https://purplehorrorrus.github.io",

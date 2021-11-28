@@ -2,42 +2,52 @@
     <div id="contact">
         <span id="contact-label" v-text="'Обратная связь с разработчиком:'" />
         <a href="https://vk.com/id529592613">
-            <font-awesome-icon id="vk-icon" :icon="['fab', 'vk']" />
+            <VKIcon id="vk-icon" class="icon" />
         </a>
         <a href="https://github.com/PurpleHorrorRus">
-            <font-awesome-icon id="github-icon" :icon="['fab', 'github']" />
+            <GithubIcon id="github-icon" class="icon" />
         </a>
         <a href="https://twitch.tv/infinitehorror">
-            <font-awesome-icon id="twitch-icon" :icon="['fab', 'twitch']" />
+            <TwitchIcon id="twitch-icon" class="icon" />
         </a>
     </div>
 </template>
 
 <script>
-export default {};
+import VKIcon from "~/assets/icons/VK.svg";
+import GithubIcon from "~/assets/icons/Github.svg";
+import TwitchIcon from "~/assets/icons/Twitch.svg";
+
+export default {
+    components: {
+        VKIcon,
+        GithubIcon,
+        TwitchIcon
+    }
+};
 </script>
 
 <style lang="scss">
 #contact {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    
     margin-top: 10px;
 
     * {
         user-select: none;
     }
 
-    span,
-    a,
-    svg {
-        font-size: 10pt;
+    &-label {
         color: #6d6d6d;
+        font-size: 12px;
     }
 
-    svg {
-        margin-right: 5px;
+    .icon {
+        width: 24px;
 
-        font-size: 12pt;
-
-        vertical-align: middle;
+        fill: #6d6d6d;
 
         &:hover {
             cursor: pointer;
@@ -45,19 +55,19 @@ export default {};
 
         &#vk-icon {
             &:hover {
-                color: rgb(117, 117, 252);
+                fill: #0077FF;
             }
         }
 
         &#github-icon {
             &:hover {
-                color: #fff;
+                fill: #ffffff;
             }
         }
 
         &#twitch-icon {
             &:hover {
-                color: #6441a5;
+                fill: #6441a5;
             }
         }
     }

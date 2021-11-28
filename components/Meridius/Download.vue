@@ -2,23 +2,24 @@
     <div id="download-icons">
         <span id="download-icons-label" v-text="'Скачать: '" />
         <a :href="link('exe')">
-            <font-awesome-icon
-                id="download-icons-windows"
-                :icon="['fab', 'windows']"
-            />
+            <WindowsIcon id="download-icons-windows" class="icon" />
         </a>
 
         <a :href="link('deb')">
-            <font-awesome-icon
-                id="download-icons-linux"
-                :icon="['fab', 'linux']"
-            />
+            <LinuxIcon id="download-icons-linux" class="icon" />
         </a>
     </div>
 </template>
 
 <script>
+import WindowsIcon from "~/assets/icons/Windows.svg";
+import LinuxIcon from "~/assets/icons/Linux.svg";
+
 export default {
+    components: {
+        WindowsIcon,
+        LinuxIcon
+    },
     data: () => ({
         version: "2.2.2"
     }),
@@ -36,14 +37,14 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    column-gap: 10px;
 
     margin: 10px;
-    gap: 10px;
 
-    svg {
-        font-size: 24pt;
-
-        color: #6d6d6d;
+    .icon {
+        width: 36px;
+        
+        fill: #6d6d6d;
 
         &:hover {
             cursor: pointer;
@@ -52,13 +53,13 @@ export default {
 
     &-windows {
         &:hover {
-            color: #4789be;
+            fill: #4789be;
         }
     }
 
     &-linux {
         &:hover {
-            color: #fff;
+            fill: #ffffff;
         }
     }
 }

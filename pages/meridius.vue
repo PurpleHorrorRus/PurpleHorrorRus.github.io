@@ -12,10 +12,16 @@
             </div>
         </div>
         <div id="features">
-            <div id="features-chunks">
-                <div v-for="(featureChunk, index) of featuresSplitted" :key="index" class="features-chunk">
-                    <Feature v-for="feature of featureChunk" :key="feature.text" :feature="feature" />
-                </div>
+            <div 
+                v-for="(chunk, index) of featuresSplitted" 
+                :key="index" 
+                class="features-chunk"
+            >
+                <Feature
+                    v-for="feature of chunk"
+                    :key="feature.text"
+                    :feature="feature" 
+                />
             </div>
         </div>
     </div>
@@ -43,17 +49,28 @@ export default {
         meta,
         link: [
             { rel: "icon", type: "image/x-icon", href: "meridius_favicon.ico" },
-            { rel: "canonical", href: "https://purplehorrorrus.github.io/meridius/" }
+            {
+                rel: "canonical",
+                href: "https://purplehorrorrus.github.io/meridius/"
+            }
         ]
     },
     computed: {
         featuresSplitted() {
-            return this.chunk(this.features, Math.floor(this.features.length / 2) + 1);
+            return this.chunk(
+                this.features,
+                Math.floor(this.features.length / 2) + 1
+            );
         }
     },
     methods: {
         chunk(arr, size) {
-            return arr.reduce((acc, e, i) => (i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc), []);
+            return arr.reduce(
+                (acc, e, i) => (
+                    i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc
+                ),
+                []
+            );
         }
     }
 };
@@ -98,21 +115,30 @@ export default {
         }
     }
 
+    @media screen and (max-width: 880px) {
+        #features {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 10px;
+
+            .feature {
+                width: 650px;
+            }
+        }
+    }
+
     #features {
         grid-area: features;
 
-        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
 
-        margin: auto;
-        margin-top: 0px;
-        // padding: 15px;
-
-        #features-chunks {
+        .features-chunk {
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-
-            margin-top: 2%;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 10px;
         }
     }
 }

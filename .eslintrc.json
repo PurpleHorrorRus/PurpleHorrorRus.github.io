@@ -12,7 +12,7 @@
         "SharedArrayBuffer": "readonly"
     },
     "parserOptions": {
-        "ecmaVersion": 2018,
+        "ecmaVersion": 2020,
         "sourceType": "module"
     },
     "rules": {
@@ -31,16 +31,20 @@
         "vue/max-attributes-per-line": "off",
         "vue/singleline-html-element-content-newline" : 0,
         "vue/no-v-html": 0,
+        "vue/html-self-closing": "off",
+        "vue/multi-word-component-names": "off",
+        "vue/comma-dangle": ["error", "never"],
+        "comma-dangle": ["error", "never"],
 
         "no-async-promise-executor": 0,
         "semi": ["error", "always"],
         "quotes": ["error", "double"],
-        "indent": ["error", 4],
-        "eol-last": 0,
+        "indent": ["error", 4, { "SwitchCase": 1 }],
         "no-trailing-spaces": 0,
         "vue/html-indent": ["warn", 4],
         "camelcase": 0,
         "no-return-assign": 0,
-        "vue/attribute-hyphenation": 0
+        "vue/attribute-hyphenation": 0,
+        "eol-last": ["error", "never"]
     }
 }
