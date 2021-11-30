@@ -21,7 +21,7 @@ export default {
         LinuxIcon
     },
     data: () => ({
-        version: "2.2.2"
+        version: "2.2.3"
     }),
     methods: {
         link(ext) {
