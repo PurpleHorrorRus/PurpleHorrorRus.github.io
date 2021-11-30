@@ -6,6 +6,7 @@
     "private": true,
     "scripts": {
         "dev": "cross-env NODE_ENV=development nuxt",
+        "start": "cross-env NODE_ENV=development nuxt start",
         "build": "cross-env NODE_ENV=development nuxt build",
         "generate": "cross-env NODE_ENV=development nuxt generate",
         "deploy": "cross-env NODE_ENV=production nuxt generate && push-dir --dir=dist --branch=gh-pages --cleanup"
