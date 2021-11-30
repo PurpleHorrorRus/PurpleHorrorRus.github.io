@@ -13,12 +13,12 @@
         </div>
         <div id="features">
             <div 
-                v-for="(chunk, index) of featuresSplitted" 
+                v-for="(featuresChunk, index) of featuresSplitted" 
                 :key="index" 
                 class="features-chunk"
             >
                 <Feature
-                    v-for="feature of chunk"
+                    v-for="feature of featuresChunk"
                     :key="feature.text"
                     :feature="feature" 
                 />
