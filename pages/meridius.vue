@@ -32,17 +32,37 @@ import Header from "~/components/Meridius/Header";
 import Description from "~/components/Meridius/Description";
 import Feature from "~/components/Meridius/Feature";
 
+import MeridiusFavicon from "~/static/meridius_favicon.ico";
+
 definePageMeta({
     layout: "empty",
     title: "Meridius - музыкальный плеер для ВКонтакте",
+    link: [
+        {
+            rel: "icon",
+            type: "image/x-icon",
+            href: "meridius_favicon.ico"
+        }
+    ]
 });
+
+useMeta({
+    title: "Meridius - музыкальный плеер для ВКонтакте",
+    link: [
+        {
+            rel: "icon",
+            type: "image/x-icon",
+            href: "meridius_favicon.ico"
+        }
+    ]
+})
 
 const features = [
     {
         icon: defineAsyncComponent(() => import("~/assets/icons/meridius/dollar.svg")),
         text: "Приложение абсолютно бесплатное",
         style: {
-            fill: "#ff0000",
+            fill: "#ff0000"
         }
     },
     {

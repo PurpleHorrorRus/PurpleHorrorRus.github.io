@@ -27,7 +27,7 @@ const projects = ref([
     {
         id: "meridius",
         image: MeridiusImage,
-        to: "https://github.com/PurpleHorrorRus/Meridius",
+        to: "/meridius",
         description:
             "Бесплатный и современный музыкальный плеер для социальной сети ВКонтакте.\
         Самый большой личный проект. Пиковый показатель пользователей - 60 человек, в среднем приложением пользуются\

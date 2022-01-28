@@ -15,6 +15,10 @@ definePageMeta({
     layout: "default",
     title: "Никифоров Максим - Главная"
 });
+
+useMeta({
+    title: "Никифоров Максим - Главная"
+});
 </script>
 
 <style lang="scss">
