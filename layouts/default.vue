@@ -22,6 +22,9 @@ import Information from "~/components/General/Information";
 
     padding: 20px 0px;
 
+    background: url("~/assets/images/background.jpg");
+    background-attachment: fixed;
+
     @media screen and (max-width: 900px) {
         grid-template-columns: 1fr;
         grid-template-rows: auto minmax(0px, 100%);
