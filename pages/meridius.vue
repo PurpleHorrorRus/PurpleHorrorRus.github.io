@@ -149,6 +149,9 @@ const featuresSplitted = computed(() => {
     top: 0px;
 
     width: 100%;
+    height: max-content;
+
+    padding-bottom: 20px;
 
     #content {
         grid-area: content;
