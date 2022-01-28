@@ -11,11 +11,6 @@ import About from "~/components/General/Content/About";
 import Projects from "~/components/General/Content/Projects";
 import Stack from "~/components/General/Content/Stack";
 
-definePageMeta({
-    layout: "default",
-    title: "Никифоров Максим - Главная"
-});
-
 useMeta({
     title: "Никифоров Максим - Главная"
 });
