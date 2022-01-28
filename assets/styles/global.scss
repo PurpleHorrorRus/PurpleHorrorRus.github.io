@@ -17,11 +17,6 @@ html, body, .layout {
     height: 100%;
 }
 
-.layout {
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
 span, p, a, h1, h2, h3, h4, h5, h6, .data-v-tooltip {
     color: var(--text);
     font-family: "Roboto";

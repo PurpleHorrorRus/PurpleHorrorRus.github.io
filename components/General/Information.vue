@@ -16,7 +16,7 @@ import Links from "~/components/General/Information/Links";
     grid-area: information;
 
     position: sticky;
-    top: 0px;
+    top: 20px;
 
     display: grid;
     grid-template-columns: 250px;

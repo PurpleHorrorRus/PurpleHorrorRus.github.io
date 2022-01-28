@@ -20,6 +20,8 @@ import Information from "~/components/General/Information";
     justify-content: center;
     column-gap: 15px;
 
+    height: max-content;
+
     padding: 20px 0px;
 
     background: url("~/assets/images/background.jpg");
