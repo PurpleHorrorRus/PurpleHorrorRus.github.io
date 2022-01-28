@@ -34,18 +34,6 @@ import Feature from "~/components/Meridius/Feature";
 
 import MeridiusFavicon from "~/static/meridius_favicon.ico";
 
-definePageMeta({
-    layout: "empty",
-    title: "Meridius - музыкальный плеер для ВКонтакте",
-    link: [
-        {
-            rel: "icon",
-            type: "image/x-icon",
-            href: "meridius_favicon.ico"
-        }
-    ]
-});
-
 useMeta({
     title: "Meridius - музыкальный плеер для ВКонтакте",
     link: [
@@ -53,6 +41,23 @@ useMeta({
             rel: "icon",
             type: "image/x-icon",
             href: "meridius_favicon.ico"
+        },
+        {
+            rel: "canonical",
+            href: "https://purplehorrorrus.github.io/meridius"
+        }
+    ],
+    meta: [
+        { 
+            hid: "description", 
+            name: "description", 
+            content: "Meridius - музыкальный плеер для ВКонтакте" 
+        },
+        { 
+            hid: "keywords", 
+            name: "keywords", 
+            content: "Meridius, Music player, VK, vk.com, ВКонтакте, \
+                музыкальный плеер для ВК, музыкальный плеер для ВКонтакте, музыкальный плеер для ВК" 
         }
     ]
 })
