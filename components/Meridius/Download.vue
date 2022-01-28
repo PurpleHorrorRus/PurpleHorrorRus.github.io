@@ -11,25 +11,12 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import WindowsIcon from "~/assets/icons/Windows.svg";
 import LinuxIcon from "~/assets/icons/Linux.svg";
 
-export default {
-    components: {
-        WindowsIcon,
-        LinuxIcon
-    },
-    data: () => ({
-        version: "2.2.8"
-    }),
-    methods: {
-        link(ext) {
-            // eslint-disable-next-line max-len
-            return `https://github.com/PurpleHorrorRus/Meridius/releases/download/v${this.version}/meridius-${this.version}.${ext}`;
-        }
-    }
-};
+const version = "2.2.9";
+const link = ext =>  `https://github.com/PurpleHorrorRus/Meridius/releases/download/v${version}/meridius-${version}.${ext}`;
 </script>
 
 <style lang="scss">
