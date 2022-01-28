@@ -17,9 +17,15 @@ html, body, .layout {
     height: 100%;
 }
 
-span, p, a, .data-v-tooltip {
+.layout {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+span, p, a, h1, h2, h3, h4, h5, h6, .data-v-tooltip {
     color: var(--text);
     font-family: "Roboto";
+    font-style: none;
 
     &::selection {
         background-color: var(--secondary);

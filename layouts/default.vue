@@ -22,9 +22,6 @@ import Information from "~/components/General/Information";
 
     padding: 20px 0px;
 
-    overflow-x: hidden;
-    overflow-y: auto;
-
     @media screen and (max-width: 900px) {
         grid-template-columns: 1fr;
         grid-template-rows: auto minmax(0px, 100%);
