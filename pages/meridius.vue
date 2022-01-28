@@ -32,8 +32,6 @@ import Header from "~/components/Meridius/Header";
 import Description from "~/components/Meridius/Description";
 import Feature from "~/components/Meridius/Feature";
 
-import MeridiusFavicon from "~/static/meridius_favicon.ico";
-
 useMeta({
     title: "Meridius - музыкальный плеер для ВКонтакте",
     link: [
