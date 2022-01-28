@@ -26,5 +26,14 @@ import Information from "~/components/General/Information";
     &-empty {
         grid-area: empty;
     }
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(0px, 100%);
+        grid-template-areas: "information"
+                            "page";
+
+        row-gap: 10px;
+    }
 }
 </style>

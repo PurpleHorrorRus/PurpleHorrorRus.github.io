@@ -15,6 +15,9 @@ import Links from "~/components/General/Information/Links";
 #information {
     grid-area: information;
 
+    position: sticky;
+    top: 0px;
+
     display: grid;
     grid-template-columns: 250px;
     grid-template-rows: 150px max-content;
@@ -33,6 +36,28 @@ import Links from "~/components/General/Information/Links";
     box-shadow: 1px 1px 2px 0px #00000033;
 
     border-radius: 4px;
+
+    @media screen and (max-width: 900px) {
+        position: static;
+
+        grid-template-columns: 120px 1fr 120px;
+        grid-template-rows: max-content;
+        grid-template-areas: "avatar bio links";
+
+        justify-self: flex-start;
+        row-gap: 10px;
+
+        width: 100%;
+
+        &-avatar {
+            width: 80%;
+            height: auto !important;
+        }
+
+        &-bio {
+            align-self: center;
+        }
+    }
 
     > div {
         padding: 10px;
