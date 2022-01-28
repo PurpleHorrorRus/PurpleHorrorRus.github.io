@@ -63,7 +63,6 @@ import BookImage from "~/assets/images/stack/book.png";
 import EnglishImage from "~/assets/images/stack/english.png";
 import NoSmokingImage from "~/assets/images/stack/no-smoking.png";
 
-import ThumbsDownImage from "~/assets/images/stack/thumbs-down.png";
 import ThinkingImage from "~/assets/images/stack/thinking.png";
 
 const technologies = ref([
@@ -255,13 +254,6 @@ const technologies = ref([
     {
         label: "Отрицательные качества",
         technologies: [
-            {
-                image: ThumbsDownImage,
-                color: "#ffff00",
-                name: "Плохое воображение",
-                tooltip: "Не всегда, но чаще всего заказчики отправляли макеты сайтов,\
-                по которым я верстал. Самому мне сложно придумывать оригинальные дизайны проектов"
-            },
             {
                 image: ThinkingImage,
                 color: "#ffffff",
