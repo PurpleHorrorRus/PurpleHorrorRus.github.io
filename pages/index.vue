@@ -1,13 +1,19 @@
 <template>
     <div id="index-page" class="page">
-
+        <About />
+        <Projects />
+        <Stack />
     </div>
 </template>
 
 <script setup>
+import About from "~/components/General/Content/About";
+import Projects from "~/components/General/Content/Projects";
+import Stack from "~/components/General/Content/Stack";
+
 definePageMeta({
     layout: "default",
-    title: "Test"
+    title: "Никифоров Максим - Главная"
 });
 </script>
 

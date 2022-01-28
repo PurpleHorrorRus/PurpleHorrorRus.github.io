@@ -1,7 +1,6 @@
 <template>
     <div id="default-layout" class="layout">
         <Information />
-        <div id="default-layout-empty" />
         <slot />
     </div>
 </template>
@@ -14,18 +13,17 @@ import Information from "~/components/General/Information";
 #default-layout {
     display: grid;
     grid-template-columns: 20% 60%;
-    grid-template-rows: max-content minmax(0px, 100%);
+    grid-template-rows: max-content max-content;
     grid-template-areas: "information page"
-                    "empty page";
+                    "information page";
 
     justify-content: center;
     column-gap: 15px;
 
-    padding: 20px;
+    padding: 20px 0px;
 
-    &-empty {
-        grid-area: empty;
-    }
+    overflow-x: hidden;
+    overflow-y: auto;
 
     @media screen and (max-width: 900px) {
         grid-template-columns: 1fr;

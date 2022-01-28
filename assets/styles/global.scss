@@ -1,3 +1,9 @@
+.data-v-tooltip {
+    --v-tooltip-background-color: var(--secondary);
+    --v-tooltip-width: 250px;
+    --v-tooltip-left: 100%;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -11,7 +17,7 @@ html, body, .layout {
     height: 100%;
 }
 
-span, p {
+span, p, a, .data-v-tooltip {
     color: var(--text);
     font-family: "Roboto";
 
@@ -39,6 +45,10 @@ a {
             color: var(--secondary);
         }
     }
+}
+
+.page {
+    border-radius: 4px;
 }
 
 .icon {

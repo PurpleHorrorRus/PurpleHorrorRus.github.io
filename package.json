@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "sass": "^1.49.0",
+    "v-tooltip": "https://github.com/maciejziemichod/v-tooltip",
     "vite-svg-loader": "^3.1.2"
   }
 }

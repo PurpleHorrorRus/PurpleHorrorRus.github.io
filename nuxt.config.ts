@@ -11,6 +11,12 @@ const svgo = svgLoader({
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+    plugins: [
+        {
+            mode: "client",
+            src: "~/plugins/tooltip.js"
+        }
+    ],
     vite: {
         plugins: [svgo]
     },

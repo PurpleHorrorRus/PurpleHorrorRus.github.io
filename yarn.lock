@@ -5158,6 +5158,10 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
+"v-tooltip@https://github.com/maciejziemichod/v-tooltip":
+  version "0.0.0"
+  resolved "https://github.com/maciejziemichod/v-tooltip#fd9b70df6691bd53b8d64c72306e232cd04ced2d"
+
 vite-svg-loader@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/vite-svg-loader/-/vite-svg-loader-3.1.2.tgz#e701d6f5d42969eac2b3c40fea9d4159bfa27be3"
