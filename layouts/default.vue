@@ -1,0 +1,30 @@
+<template>
+    <div id="default-layout" class="layout">
+        <Information />
+        <div id="default-layout-empty" />
+        <slot />
+    </div>
+</template>
+
+<script setup>
+import Information from "~/components/General/Information";
+</script>
+
+<style lang="scss">
+#default-layout {
+    display: grid;
+    grid-template-columns: 20% 60%;
+    grid-template-rows: max-content minmax(0px, 100%);
+    grid-template-areas: "information page"
+                    "empty page";
+
+    justify-content: center;
+    column-gap: 15px;
+
+    padding: 20px;
+
+    &-empty {
+        grid-area: empty;
+    }
+}
+</style>
