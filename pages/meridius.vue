@@ -32,7 +32,6 @@ import Header from "~/components/Meridius/Header";
 import Description from "~/components/Meridius/Description";
 import Feature from "~/components/Meridius/Feature";
 
-import head from "~/assets/meta/meridius/head.json";
 import features from "~/assets/meta/meridius/features.json";
 
 export default {
@@ -42,15 +41,44 @@ export default {
         Feature
     },
     layout: "empty",
-    head() {
-        return head;
+    head: {
+        title: "Meridius - музыкальный плеер для ВКонтакте",
+        link: [
+            {
+                rel: "icon",
+                type: "image/x-icon",
+                href: "meridius_favicon.ico"
+            },
+            {
+                rel: "canonical",
+                href: "https://purplehorrorrus.github.io/meridius"
+            }
+        ],
+        meta: [
+            {
+                hid: "description",
+                name: "description",
+                content: "Meridius - музыкальный плеер для ВКонтакте"
+            },
+            {
+                hid: "keywords",
+                name: "keywords",
+                // eslint-disable-next-line max-len
+                content: "Meridius, Music player, VK, vk.com, ВКонтакте, музыкальный плеер для ВК, музыкальный плеер для ВКонтакте, музыкальный плеер для ВК"
+            }
+        ]
     },
     data: () => ({
         features
     }),
     computed: {
-        featuresSplitted() { 
-            return features.reduce((acc, e, i) => (i % 10 ? acc[acc.length - 1].push(e) : acc.push([e]), acc), []);
+        featuresSplitted() {
+            return features.reduce(
+                (acc, e, i) => (
+                    i % 10 ? acc[acc.length - 1].push(e) : acc.push([e]), acc
+                ),
+                []
+            );
         }
     }
 };
@@ -74,7 +102,7 @@ export default {
     padding-bottom: 20px;
 
     background: var(--primary);
-    
+
     overflow: auto;
 
     #content {
