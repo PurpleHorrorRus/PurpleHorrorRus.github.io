@@ -40,6 +40,8 @@ export default {
                             "page";
 
         row-gap: 10px;
+
+        padding: 0px;
     }
 }
 </style>

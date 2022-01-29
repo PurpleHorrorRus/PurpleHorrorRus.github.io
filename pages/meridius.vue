@@ -107,10 +107,14 @@ export default {
 
     background: var(--primary);
 
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     #content {
         grid-area: content;
+
+        display: flex;
+        justify-content: center;
 
         background-color: #141413;
 
@@ -120,30 +124,30 @@ export default {
             align-items: center;
             flex-wrap: wrap;
 
-            padding-top: 10px;
+            width: 100%;
+
+            padding-bottom: 10px;
+
+            background: #0f0f0f0f;
 
             #MeridiusScreenshot {
-                width: 650px;
+                width: 40%;
 
-                padding: 50px;
+                border-radius: 8px;
 
-                border-radius: 25px;
-
-                vertical-align: middle;
+                @media screen and (max-width: 900px) {
+                    width: 90vw;
+                }
             }
         }
     }
 
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: 900px) {
         #features {
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
             row-gap: 10px;
 
-            .feature {
-                width: 650px;
-            }
+            padding: 10px;
         }
     }
 

@@ -34,35 +34,40 @@ export default {
 </script>
 
 <style lang="scss">
-#meridius {
+#meridius-description {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 
-    background: #0f0f0f;
+    @media screen and (max-width: 900px) {
+        padding: 10px;
+    }
 
-    &-description {
+    &-logo {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        column-gap: 10px;
 
-        &-logo {
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
+        @media screen and (max-width: 900px) {
+            justify-content: center;
+        }
 
-            &-icon {
-                height: 40px;
-            }
-
-            &-text {
-                font-family: "Fira Sans";
-                font-size: 30px;
-            }
+        &-icon {
+            height: 40px;
         }
 
         &-text {
-            width: 400px;
+            font-family: "Fira Sans";
+            font-size: 30px;
+        }
+    }
 
-            font-weight: 400;
+    &-text {
+        width: 400px;
+
+        font-weight: 400;
+
+        @media screen and (max-width: 900px) {
+            width: auto;
         }
     }
 }

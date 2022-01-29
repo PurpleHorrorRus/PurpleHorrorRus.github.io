@@ -34,5 +34,8 @@ export default {
     background: var(--backdrop);
 
     box-shadow: 1px 1px 2px 0px #00000033;
+
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 </style>

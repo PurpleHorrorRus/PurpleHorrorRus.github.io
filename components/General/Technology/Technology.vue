@@ -54,6 +54,10 @@ export default {
     &-name {
         color: #ffffff;
         font-size: 16px;
+
+        @media screen and (max-width: 900px) {
+            font-size: 12px;
+        }
     }
 }
 </style>

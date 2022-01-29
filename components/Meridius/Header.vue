@@ -23,10 +23,5 @@ export default {};
         font-family: "Fira Sans";
         font-size: 24pt;
     }
-
-    #description {
-        color: #7e7e7e;
-        font-size: 10pt;
-    }
 }
 </style>
