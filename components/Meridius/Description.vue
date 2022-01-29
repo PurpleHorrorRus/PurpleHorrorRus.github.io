@@ -61,6 +61,8 @@ export default {
 
         &-text {
             width: 400px;
+
+            font-weight: 400;
         }
     }
 }

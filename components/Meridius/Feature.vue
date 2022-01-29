@@ -29,11 +29,12 @@ export default {
     &-icon {
         width: 26px;
 
-        fill: #fff;
+        fill: #ffffff;
     }
 
-    &-text {
-        font-size: 18px;
+    &-label {
+        color: #ffffff;
+        font-size: 16px;
     }
 }
 </style>
