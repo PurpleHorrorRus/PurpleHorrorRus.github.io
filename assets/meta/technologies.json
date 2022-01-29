@@ -1,0 +1,186 @@
+[
+    {
+        "label": "Хорошо знаю",
+        "technologies": [
+            {
+                "image": "nuxt.png",
+                "color": "#41b883",
+                "name": "NuxtJS",
+                "tooltip": "Интересный факт - данный сайт написан на NuxtJS 3"
+            },
+            {
+                "image": "vue.png",
+                "color": "#41B883",
+                "name": "VueJS"
+            },
+            {
+                "image": "node.png",
+                "color": "#68A063",
+                "name": "NodeJS"
+            },
+            {
+                "image": "scss.png",
+                "color": "#cd6799",
+                "name": "SCSS"
+            },
+            {
+                "image": "html.png",
+                "color": "#F06529",
+                "name": "HTML"
+            },
+            {
+                "image": "javascript.png",
+                "color": "#F0DB4F",
+                "name": "Javascript"
+            },
+            {
+                "image": "css.png",
+                "color": "#264de4",
+                "name": "CSS"
+            },
+            {
+                "image": "jquery.png",
+                "color": "#0769ad",
+                "name": "jQuery"
+            },
+            {
+                "image": "java.png",
+                "color": "#5382a1",
+                "name": "Java"
+            },
+            {
+                "image": "git.png",
+                "color": "#f34f29",
+                "name": "GIT"
+            },
+            {
+                "image": "mongo.png",
+                "color": "#4DB33D",
+                "name": "MongoDB"
+            }
+        ]
+    },
+    {
+        "label": "Средний уровень",
+        "technologies": [
+            {
+                "image": "python.png",
+                "color": "#fbcb24",
+                "name": "Python"
+            },
+            {
+                "image": "php.png",
+                "color": "#474A8A",
+                "name": "PHP"
+            },
+            {
+                "image": "mysql.png",
+                "color": "#00758F",
+                "name": "MySQL"
+            },
+            {
+                "image": "linux.png",
+                "color": "#ffffff",
+                "name": "Linux"
+            }
+        ]
+    },
+    {
+        "label": "Изучаю прямо сейчас",
+        "technologies": [
+            {
+                "image": "typescript.png",
+                "color": "#3178C6",
+                "name": "Typescript"
+            }
+        ]
+    },
+    {
+        "label": "В планах на изучение",
+        "technologies": [
+            {
+                "image": "react.png",
+                "color": "#61dbfb",
+                "name": "React"
+            },
+            {
+                "image": "redux.png",
+                "color": "#764abc",
+                "name": "Redux"
+            },
+            {
+                "image": "symfony.png",
+                "color": "#ffffff",
+                "name": "Symfony"
+            },
+            {
+                "image": "laravel.png",
+                "color": "#F05340",
+                "name": "Laravel"
+            }
+        ]
+    },
+    {
+        "label": "Инструменты для работы",
+        "technologies": [
+            {
+                "image": "vscode.png",
+                "color": "#0078d7",
+                "name": "Visual Studio Code"
+            },
+            {
+                "image": "eslint.png",
+                "color": "#0000FF",
+                "name": "ESLint"
+            },
+            {
+                "image": "github.png",
+                "color": "#7f7f7f",
+                "name": "GitHub"
+            },
+            {
+                "image": "photoshop.png",
+                "color": "#07bce3",
+                "name": "Adobe Photoshop"
+            }
+        ]
+    },
+    {
+        "label": "Персональные навыки",
+        "technologies": [
+            {
+                "image": "thumbs-up.png",
+                "color": "#ffffff",
+                "name": "Прагматичный",
+                "tooltip": "Всегда доделываю проекты до конца, стараюсь искать самые эффективные решения"
+            },
+            {
+                "image": "relieved.png",
+                "color": "#90ee90",
+                "name": "Неконфликтный"
+            },
+            {
+                "image": "handshake.png",
+                "color": "#ffffff",
+                "name": "Командный игрок"
+            },
+            {
+                "image": "book.png",
+                "color": "#ffffff",
+                "name": "Люблю учиться",
+                "tooltip": "Все знания человека - приобретённые. Поэтому нужно постоянно учиться чему-то новому, особенно в нашей профессии"
+            },
+            {
+                "image": "english.png",
+                "color": "#c8102e",
+                "name": "Уверенные знания английского языка",
+                "tooltip": "Чтение и составление документаций и текстов на английском языке"
+            },
+            {
+                "image": "no-smoking.png",
+                "color": "#000000",
+                "name": "Без вредных привычек"
+            }
+        ]
+    }
+]

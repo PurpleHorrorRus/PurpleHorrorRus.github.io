@@ -1,0 +1,14 @@
+[
+    {
+        "id": "github",
+        "icon": "github.svg",
+        "label": "GitHub",
+        "to": "https://github.com/PurpleHorrorRus"
+    },
+    {
+        "id": "telegram",
+        "icon": "telegram.svg",
+        "label": "Telegram",
+        "to": "https://t.me/InfiniteHorror"
+    }
+]
