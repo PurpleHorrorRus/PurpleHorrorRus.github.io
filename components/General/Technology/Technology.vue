@@ -36,7 +36,7 @@ export default {
     display: flex;
     align-items: center;
     align-content: center;
-    column-gap: 10px;
+    column-gap: 5px;
 
     width: max-content;
     height: 40px;
