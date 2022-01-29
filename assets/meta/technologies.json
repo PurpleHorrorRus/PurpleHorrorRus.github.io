@@ -24,6 +24,16 @@
                 "name": "SCSS"
             },
             {
+                "image": "brush.png",
+                "color": "#00ffff",
+                "name": "Adaptive layout"
+            },
+            {
+                "image": "api.png",
+                "color": "#11eda4",
+                "name": "REST API"
+            },
+            {
                 "image": "html.png",
                 "color": "#F06529",
                 "name": "HTML"
