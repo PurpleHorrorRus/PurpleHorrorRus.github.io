@@ -149,6 +149,11 @@
                 "name": "GitHub"
             },
             {
+                "image": "fork.png",
+                "color": "#058dc6",
+                "name": "Fork"
+            },
+            {
                 "image": "photoshop.png",
                 "color": "#07bce3",
                 "name": "Adobe Photoshop"
