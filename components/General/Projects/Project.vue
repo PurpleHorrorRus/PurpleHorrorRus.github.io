@@ -30,11 +30,9 @@ export default {
     }),
     computed: {
         formattedDescription() {
-            const formatted = this.project.description.replaceAll(
-                "\n",
-                "<br />"
-            );
-            return this.expanded.value
+            const formatted = this.project.description.replaceAll("\n", "<br />");
+            
+            return this.expanded
                 ? formatted
                 : formatted.substring(0, maxLen) + "...";
         },
