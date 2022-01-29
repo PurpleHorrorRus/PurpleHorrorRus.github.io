@@ -41,6 +41,7 @@ export default {
         Description,
         Feature
     },
+    layout: "empty",
     head() {
         return head;
     },
@@ -68,9 +69,13 @@ export default {
     top: 0px;
 
     width: 100%;
-    height: max-content;
+    height: 100%;
 
     padding-bottom: 20px;
+
+    background: var(--primary);
+    
+    overflow: auto;
 
     #content {
         grid-area: content;
