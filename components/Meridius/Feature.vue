@@ -22,7 +22,9 @@ export default {
 
 <style lang="scss">
 .feature {
-    display: flex;
+    display: grid;
+    grid-template-columns: 26px auto;
+
     align-items: center;
     column-gap: 10px;
 
