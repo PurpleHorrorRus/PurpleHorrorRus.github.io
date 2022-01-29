@@ -1,48 +1,45 @@
 <template>
-    <nuxt />
+    <div id="default-layout" class="layout">
+        <Information />
+        <nuxt />
+    </div>
 </template>
 
-<style>
-html,
-body,
-#__nuxt,
-#__layout {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: #171717;
-    font-family: Roboto;
-    font-size: 16px;
-    word-spacing: 1px;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-}
+<script>
+import Information from "~/components/General/Information";
 
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #fff;
-    user-select: none;
-}
+export default {
+    components: {
+        Information
+    }
+};
+</script>
 
-a {
-    display: inline-block;
-    width: max-content;
-}
+<style lang="scss">
+#default-layout {
+    display: grid;
+    grid-template-columns: 20% 60%;
+    grid-template-rows: max-content max-content;
+    grid-template-areas: "information page"
+                    "information page";
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-    margin: 0;
+    justify-content: center;
+    column-gap: 15px;
+
+    height: max-content;
+
+    padding: 20px 0px;
+
+    background: url("~/assets/images/background.jpg");
+    background-attachment: fixed;
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(0px, 100%);
+        grid-template-areas: "information"
+                            "page";
+
+        row-gap: 10px;
+    }
 }
 </style>

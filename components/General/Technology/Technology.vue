@@ -4,7 +4,10 @@
         class="technology"
         :style="technologyStyle"
     >
-        <img :src="`~/assets/images/stack/${technology.image}`" class="technology-image" />
+        <img
+            :src="require(`~/assets/images/stack/${technology.image}`)"
+            class="technology-image"
+        />
         <span class="technology-name" v-text="technology.name" />
     </div>
 </template>

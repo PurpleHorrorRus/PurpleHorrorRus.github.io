@@ -2,7 +2,7 @@
     <div class="project">
         <a :href="project.to" class="clickable">
             <img
-                :src="`~/assets/images/projects/${project.image}`"
+                :src="require(`~/assets/images/projects/${project.image}`)"
                 class="project-image"
             />
         </a>

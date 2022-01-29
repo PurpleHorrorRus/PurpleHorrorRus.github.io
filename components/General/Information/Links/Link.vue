@@ -1,6 +1,6 @@
 <template>
     <a class="link clickable" :href="link.to">
-        <Component :is="link.icon" v-if="link.icon" class="link-icon icon" />
+        <Component :is="require(`~/assets/icons/${link.icon}`)" v-if="link.icon" class="link-icon icon" />
 
         <span class="link-label" v-text="link.label" />
     </a>

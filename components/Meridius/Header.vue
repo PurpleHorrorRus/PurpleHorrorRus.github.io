@@ -1,7 +1,6 @@
 <template>
     <div id="header">
         <h1 id="logo" v-text="'Meridius'" />
-        <span id="description" v-text="'Музыкальный плеер для ВКонтакте'" />
     </div>
 </template>
 
@@ -12,7 +11,13 @@ export default {};
 <style lang="scss">
 #header {
     grid-area: header;
-    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px 10px;
+
+    background: #161616;
 
     #logo {
         font-family: "Fira Sans";
@@ -20,8 +25,6 @@ export default {};
     }
 
     #description {
-        display: block;
-
         color: #7e7e7e;
         font-size: 10pt;
     }

@@ -5,16 +5,16 @@
             {
                 "image": "nuxt.png",
                 "color": "#41b883",
-                "name": "NuxtJS",
-                "tooltip": "Интересный факт - данный сайт написан на NuxtJS 3"
+                "name": "Nuxt.js",
+                "tooltip": "Интересный факт - данный сайт написан на Nuxt.js 2"
             },
             {
                 "image": "vue.png",
                 "color": "#41B883",
-                "name": "VueJS"
+                "name": "Vue.js"
             },
             {
-                "image": "node.png",
+                "image": "nodejs.png",
                 "color": "#68A063",
                 "name": "NodeJS"
             },

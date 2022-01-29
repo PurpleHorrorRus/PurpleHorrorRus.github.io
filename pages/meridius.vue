@@ -8,32 +8,32 @@
                     id="MeridiusScreenshot"
                     src="https://raw.githubusercontent.com/PurpleHorrorRus/Meridius/master/screenshots/0.png"
                     alt="Meridius screenshot"
-                >
+                />
             </div>
         </div>
         <div id="features">
-            <div 
-                v-for="(featuresChunk, index) of featuresSplitted" 
-                :key="index" 
+            <div
+                v-for="(featuresChunk, index) of featuresSplitted"
+                :key="index"
                 class="features-chunk"
             >
                 <Feature
                     v-for="feature of featuresChunk"
                     :key="feature.text"
-                    :feature="feature" 
+                    :feature="feature"
                 />
             </div>
         </div>
     </div>
 </template>
 
-<script>
+<script setup>
 import Header from "~/components/Meridius/Header";
 import Description from "~/components/Meridius/Description";
 import Feature from "~/components/Meridius/Feature";
 
-import meta from "~/assets/meridius/meta.json";
-import features from "~/assets/meridius/features.json";
+import head from "~/assets/meta/meridius/head.json";
+import features from "~/assets/meta/meridius/features.json";
 
 export default {
     components: {
@@ -41,36 +41,15 @@ export default {
         Description,
         Feature
     },
+    head() {
+        return head;
+    },
     data: () => ({
         features
     }),
-    head: {
-        title: "Meridius - музыкальный плеер для ВКонтакте",
-        meta,
-        link: [
-            { rel: "icon", type: "image/x-icon", href: "meridius_favicon.ico" },
-            {
-                rel: "canonical",
-                href: "https://purplehorrorrus.github.io/meridius/"
-            }
-        ]
-    },
     computed: {
-        featuresSplitted() {
-            return this.chunk(
-                this.features,
-                Math.floor(this.features.length / 2) + 1
-            );
-        }
-    },
-    methods: {
-        chunk(arr, size) {
-            return arr.reduce(
-                (acc, e, i) => (
-                    i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc
-                ),
-                []
-            );
+        featuresSplitted() { 
+            return features.reduce((acc, e, i) => (i % 10 ? acc[acc.length - 1].push(e) : acc.push([e]), acc), []);
         }
     }
 };
@@ -89,6 +68,9 @@ export default {
     top: 0px;
 
     width: 100%;
+    height: max-content;
+
+    padding-bottom: 20px;
 
     #content {
         grid-area: content;
@@ -133,6 +115,8 @@ export default {
 
         display: flex;
         justify-content: space-evenly;
+
+        margin-top: 10px;
 
         .features-chunk {
             display: flex;

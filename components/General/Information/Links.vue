@@ -19,12 +19,7 @@ export default {
         Link
     },
     data: () => ({
-        links: links.map(link => {
-            return {
-                ...link,
-                icon: () => import(`~/assets/icons/${link.icon}`)
-            };
-        })
+        links
     })
 };
 </script>

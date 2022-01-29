@@ -16,6 +16,11 @@ export default {
         About,
         Projects,
         Stack
+    },
+    head() {
+        return {
+            title: "Никифоров Максим - Главная"
+        };
     }
 };
 </script>

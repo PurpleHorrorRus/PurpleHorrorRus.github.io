@@ -1,7 +1,7 @@
 <template>
     <div class="feature">
         <Component
-            :is="require(`~/assets/icons/${feature.icon}.svg`)"
+            :is="require(`~/assets/icons/meridius/${feature.icon}`)"
             class="feature-icon"
             :style="feature.style || {}"
         />

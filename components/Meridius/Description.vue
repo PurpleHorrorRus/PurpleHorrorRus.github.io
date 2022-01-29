@@ -1,11 +1,15 @@
 <template>
-    <div id="description">
-        <div id="meridius-logo">
-            <img id="meridius-icon" src="~/assets/meridius/icon.png" alt="Meridius icon">
-            <h2 id="logo" v-text="'Meridius'" />
+    <div id="meridius-description">
+        <div id="meridius-description-logo">
+            <img
+                id="meridius-description-logo-icon"
+                src="~/assets/images/meridius/icon.png"
+                alt="Meridius icon"
+            />
+            <h2 id="meridius-description-logo-text" v-text="'Meridius'" />
         </div>
         <h3
-            id="description-text"
+            id="meridius-description-text"
             v-text="
                 'Современный, красивый, многофункциональный \
                     и бесплатный музыкальный плеер для социальной сети ВКонтакте'
@@ -30,38 +34,34 @@ export default {
 </script>
 
 <style lang="scss">
-#meridius #description {
-    display: inline-block;
+#meridius {
+    display: flex;
+    justify-content: center;
 
-    #meridius-logo {
-        display: block;
+    background: #0f0f0f;
 
-        #meridius-icon {
-            width: 40px;
+    &-description {
+        display: flex;
+        flex-direction: column;
 
-            vertical-align: middle;
+        &-logo {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+
+            &-icon {
+                height: 40px;
+            }
+
+            &-text {
+                font-family: "Fira Sans";
+                font-size: 30px;
+            }
         }
 
-        #logo {
-            display: inline-block;
-
-            font-family: "Fira Sans";
-            font-size: 24pt;
-
-            vertical-align: middle;
+        &-text {
+            width: 400px;
         }
-    }
-
-    &-text {
-        display: block;
-
-        max-width: 400px;
-
-        margin-top: 10px;
-    }
-
-    #download-link {
-        text-decoration: none;
     }
 }
 </style>

@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, #__nuxt, #__layout, .layout {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0px;
+}
+
+span, p, a, h1, h2, h3, h4, h5, h6, .data-v-tooltip {
+    color: var(--text);
+    font-family: "Roboto";
+    font-style: none;
+
+    &::selection {
+        background-color: var(--secondary);
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: default;
+}
+
+.tooltip {
+    display: block !important;
+
+    max-width: 350px;
+    
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+
+    z-index: 10000;
+
+    &-inner {
+        padding: 10px;
+
+        color: #ffffff;
+        font-family: "Roboto";
+        font-weight: 400;
+
+        background: var(--secondary);
+        border-radius: 4px;
+    }
+
+    &[aria-hidden='true'] {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .1s, visibility .1s;
+    }
+  
+    &[aria-hidden='false'] {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity .1s;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+
+    &:hover {
+        color: var(--secondary);
+
+        .icon {
+            fill: var(--secondary);
+        }
+
+        span {
+            color: var(--secondary);
+        }
+    }
+}
+
+.page {
+    border-radius: 4px;
+}
+
+.icon {
+    fill: var(--text);
+}

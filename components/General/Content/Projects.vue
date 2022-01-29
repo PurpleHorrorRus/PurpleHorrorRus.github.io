@@ -40,6 +40,9 @@ export default {
 
         margin-top: 10px;
 
+        overflow-x: auto;
+        overflow-y: hidden;
+
         @media screen and (max-width: 900px) {
             row-gap: 20px;
 

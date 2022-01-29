@@ -7,22 +7,17 @@
         <a href="https://github.com/PurpleHorrorRus">
             <GithubIcon id="github-icon" class="icon" />
         </a>
-        <a href="https://twitch.tv/infinitehorror">
-            <TwitchIcon id="twitch-icon" class="icon" />
-        </a>
     </div>
 </template>
 
 <script>
 import VKIcon from "~/assets/icons/VK.svg";
-import GithubIcon from "~/assets/icons/Github.svg";
-import TwitchIcon from "~/assets/icons/Twitch.svg";
+import GithubIcon from "~/assets/icons/github.svg";
 
 export default {
     components: {
         VKIcon,
-        GithubIcon,
-        TwitchIcon
+        GithubIcon
     }
 };
 </script>
