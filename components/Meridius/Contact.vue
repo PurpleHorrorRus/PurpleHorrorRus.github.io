@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import VKIcon from "~/assets/icons/VK.svg";
+import VKIcon from "~/assets/icons/vk.svg";
 import GithubIcon from "~/assets/icons/github.svg";
 
 export default {
