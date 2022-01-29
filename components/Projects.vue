@@ -17,30 +17,14 @@
 <script>
 import Project from "~/components/Project";
 
-import MeridiusIcon from "~/assets/images/Meridius.png";
-import OverlayIcon from "~/assets/images/StreamOverlay.png";
+import projects from "~/assets/meta/projects.json";
 
 export default {
     components: {
         Project
     },
     data: () => ({
-        projects: [
-            {
-                title: "Meridius",
-                icon: MeridiusIcon,
-                description: "Meridius - это бесплатный неофициальный музыкальный плеер для социальной сети ВКонтакте",
-                href: "/meridius"
-            },
-            {
-                title: "Stream Overlay",
-                icon: OverlayIcon,
-                description:
-                    "Оверлей для стримеров с одним монитором. \
-                Выводится поверх окон, поддерживает чат Twitch и кастомные виджеты",
-                href: "https://github.com/PurpleHorrorRus/StreamOverlay"
-            }
-        ]
+        projects
     })
 };
 </script>

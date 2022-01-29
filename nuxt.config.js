@@ -14,10 +14,15 @@ module.exports = {
             {
                 rel: "preconnect",
                 href: "https://fonts.gstatic.com"
+            }
+        ],
+        meta: [
+            {
+                charset: "utf-8"
             },
             {
-                rel: "stylesheet",
-                href: "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap"
+                name: "viewport",
+                content: "width=device-width, initial-scale=1"
             }
         ]
     },
@@ -49,5 +54,20 @@ module.exports = {
             src: "~plugins/tooltip.js",
             mode: "client"
         }
-    ]
+    ],
+    modules: [
+        "@nuxtjs/sitemap"
+    ],
+    sitemap: {
+        hostname: "https://purplehorrorrus.github.io",
+        trailingSlash: true,
+        routes: [
+            {
+                url: "/meridius",
+                changefreq: "daily",
+                priority: 1,
+                lastmod: new Date()
+            }
+        ]
+    }
 };

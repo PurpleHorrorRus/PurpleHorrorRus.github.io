@@ -27,7 +27,7 @@
     </div>
 </template>
 
-<script setup>
+<script>
 import Header from "~/components/Meridius/Header";
 import Description from "~/components/Meridius/Description";
 import Feature from "~/components/Meridius/Feature";
@@ -41,6 +41,9 @@ export default {
         Feature
     },
     layout: "empty",
+    data: () => ({
+        features
+    }),
     head: {
         title: "Meridius - музыкальный плеер для ВКонтакте",
         link: [
@@ -52,6 +55,10 @@ export default {
             {
                 rel: "canonical",
                 href: "https://purplehorrorrus.github.io/meridius"
+            },
+            {
+                rel: "stylesheet",
+                href: "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap"
             }
         ],
         meta: [
@@ -68,9 +75,6 @@ export default {
             }
         ]
     },
-    data: () => ({
-        features
-    }),
     computed: {
         featuresSplitted() {
             return features.reduce(
