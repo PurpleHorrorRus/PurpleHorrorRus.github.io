@@ -11,7 +11,7 @@
     </div>
 </template>
 
-<script setup>
+<script>
 import WindowsIcon from "~/assets/icons/windows.svg";
 import LinuxIcon from "~/assets/icons/linux.svg";
 

@@ -9,7 +9,7 @@
     </div>
 </template>
 
-<script setup>
+<script>
 import Link from "~/components/General/Information/Links/Link";
 
 import links from "~/assets/meta/links.json";
