@@ -135,14 +135,14 @@ export default {
 
                 border-radius: 8px;
 
-                @media screen and (max-width: 900px) {
+                @media screen and (orientation: portrait) {
                     width: 90vw;
                 }
             }
         }
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (orientation: portrait) {
         #features {
             flex-direction: column;
             row-gap: 10px;
