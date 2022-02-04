@@ -1,5 +1,5 @@
 <template>
-    <div id="information">
+    <div id="information" class="shadow">
         <img id="information-avatar" src="~/assets/images/avatar.jpg">
         <Credits />
         <Links />
@@ -26,7 +26,7 @@ export default {
     top: 20px;
 
     display: grid;
-    grid-template-columns: 250px;
+    grid-template-columns: 220px;
     grid-template-rows: 150px max-content;
     grid-template-areas: "avatar"
                         "bio"
@@ -40,7 +40,6 @@ export default {
     height: max-content;
 
     background: var(--backdrop);
-    box-shadow: 1px 1px 2px 0px #00000033;
 
     border-radius: 4px;
 

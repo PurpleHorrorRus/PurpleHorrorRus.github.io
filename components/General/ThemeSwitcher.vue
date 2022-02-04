@@ -1,7 +1,7 @@
 <template>
     <div
         id="theme-switcher"
-        class="clickable"
+        class="clickable shadow"
         @click="switchTheme"
     >
         <SunIcon v-if="!isDarkTheme" class="icon" />
