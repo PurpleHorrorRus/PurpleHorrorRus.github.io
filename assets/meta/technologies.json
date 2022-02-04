@@ -92,6 +92,11 @@
                 "image": "linux.png",
                 "color": "#ffffff",
                 "name": "Linux"
+            },
+            {
+                "image": "docker.png",
+                "color": "#0db7ed",
+                "name": "Docker"
             }
         ]
     },
