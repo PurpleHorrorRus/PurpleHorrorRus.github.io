@@ -23,7 +23,7 @@ export default {
     margin: 10px;
     padding: 10px;
 
-    background: #202020;
+    background: var(--category);
     border-radius: 4px;
 
     &-label, &-text {
@@ -35,7 +35,6 @@ export default {
 
         padding: 5px 10px;
         
-        color: #ffffff;
         font-size: 21px;
     
         border-bottom: 1px solid #3f3f3f;

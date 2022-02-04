@@ -105,10 +105,14 @@ export default {
 
     padding-bottom: 20px;
 
-    background: var(--primary);
+    background: #131313;
 
     overflow-x: hidden;
     overflow-y: auto;
+
+    span, p, a, h1, h2, h3, h4, h5, h6 {
+        color: #ffffff;
+    }
 
     #content {
         grid-area: content;

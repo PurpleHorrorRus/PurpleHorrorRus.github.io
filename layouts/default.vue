@@ -30,8 +30,7 @@ export default {
 
     padding: 20px 0px;
 
-    background: url("~/assets/images/background.jpg");
-    background-attachment: fixed;
+    background-color: var(--primary);
 
     @media screen and (max-width: 900px) {
         grid-template-columns: 1fr;

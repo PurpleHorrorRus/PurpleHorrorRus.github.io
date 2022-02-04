@@ -3,6 +3,8 @@
         <About />
         <Projects />
         <Stack />
+
+        <ThemeSwitcher />
     </div>
 </template>
 
@@ -10,12 +12,15 @@
 import About from "~/components/General/Content/About";
 import Projects from "~/components/General/Content/Projects";
 import Stack from "~/components/General/Content/Stack";
+import ThemeSwitcher from "~/components/General/ThemeSwitcher";
 
 export default {
     components: {
         About,
         Projects,
-        Stack
+        Stack,
+
+        ThemeSwitcher
     },
     head() {
         return {
@@ -23,7 +28,7 @@ export default {
         };
     },
     mounted() {
-        alert("Внимание! На данный момент эта страница ещё не готова. Все картинки - временные и будут заменены со временем.");
+        // alert("Внимание! На данный момент эта страница ещё не готова. Все картинки - временные и будут заменены со временем.");
     }
 };
 </script>

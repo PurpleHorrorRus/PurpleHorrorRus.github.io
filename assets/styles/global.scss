@@ -13,10 +13,16 @@ html, body, #__nuxt, #__layout, .layout {
     margin: 0px;
 }
 
+div {
+    transition: background .2s ease-in-out;
+}
+
 span, p, a, h1, h2, h3, h4, h5, h6, .data-v-tooltip {
     color: var(--text);
     font-family: "Roboto";
     font-style: none;
+
+    transition: color .2s ease-in-out;
 
     &::selection {
         background-color: var(--secondary);
@@ -84,4 +90,6 @@ a {
 
 .icon {
     fill: var(--text);
+
+    transition: fill .2s ease-in-out;
 }

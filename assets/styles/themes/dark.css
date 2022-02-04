@@ -1,8 +1,9 @@
-html {
+html.dark-mode {
     --primary: #131313;
     --secondary: #9c3536;
 
     --backdrop: #181818;
+    --category: #202020;
 
     --text: #cecece;
 }

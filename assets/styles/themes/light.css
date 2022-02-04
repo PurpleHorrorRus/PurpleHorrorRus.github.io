@@ -1,0 +1,9 @@
+html.light-mode {
+    --primary: #ffffff;
+    --secondary: #9c3536;
+
+    --backdrop: #ececec;
+    --category: #f5f5f5;
+
+    --text: #000000;
+}

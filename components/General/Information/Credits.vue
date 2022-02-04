@@ -1,7 +1,6 @@
 <template>
     <div id="information-bio">
-        <span id="information-bio-name" v-text="'Имя: Максим'" />
-        <span id="information-bio-lastname" v-text="'Фамилия: Никифоров'" />
+        <span id="information-bio-fullname" v-text="'ФИО: Никифоров Максим Игоревич'" />
         <span
             id="information-bio-ages"
             v-text="`Возраст: ${age} ${agesString}`"
@@ -56,7 +55,7 @@ export default {
     height: max-content;
 
     span {
-        color: #cecece;
+        color: var(--text);
         font-size: 14px;
     }
 }

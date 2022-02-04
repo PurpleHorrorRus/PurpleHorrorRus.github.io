@@ -46,8 +46,10 @@ module.exports = {
         }
     },
     css: [
-        "~assets/styles/colors.css",
-        "~assets/styles/global.scss"
+        "~assets/styles/global.scss",
+
+        "~assets/styles/themes/dark.css",
+        "~assets/styles/themes/light.css"
     ],
     plugins: [
         {
@@ -57,6 +59,9 @@ module.exports = {
     ],
     modules: [
         "@nuxtjs/sitemap"
+    ],
+    buildModules: [
+        "@nuxtjs/color-mode"
     ],
     sitemap: {
         hostname: "https://purplehorrorrus.github.io",
@@ -69,5 +74,15 @@ module.exports = {
                 lastmod: new Date()
             }
         ]
+    },
+    colorMode: {
+        preference: "dark",
+        fallback: "light",
+        hid: "nuxt-color-mode-script",
+        globalName: "__NUXT_COLOR_MODE__",
+        componentName: "ColorScheme",
+        classPrefix: "",
+        classSuffix: "-mode",
+        storageKey: "nuxt-theme"
     }
 };

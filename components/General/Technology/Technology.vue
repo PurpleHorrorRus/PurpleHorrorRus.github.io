@@ -52,7 +52,7 @@ export default {
     }
 
     &-name {
-        color: #ffffff;
+        color: var(--text);
         font-size: 16px;
 
         @media screen and (max-width: 900px) {
