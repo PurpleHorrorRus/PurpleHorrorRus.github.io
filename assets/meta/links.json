@@ -10,5 +10,11 @@
         "icon": "telegram.svg",
         "label": "Telegram",
         "to": "https://t.me/InfiniteHorror"
+    },
+    {
+        "id": "email",
+        "icon": "letter.svg",
+        "label": "Nikifor0w@yandex.ru",
+        "to": "mailto:Nikifor0w@yandex.ru"
     }
 ]
