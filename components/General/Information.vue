@@ -22,19 +22,8 @@ export default {
 #information {
     grid-area: information;
 
-    position: sticky;
-    top: 20px;
-
     display: grid;
-    grid-template-columns: 220px;
-    grid-template-rows: 150px max-content;
-    grid-template-areas: "avatar"
-                        "bio"
-                        "links";
-    
     justify-self: flex-end;
-    column-gap: 10px;
-    row-gap: 10px;
 
     width: max-content;
     height: max-content;
@@ -43,26 +32,60 @@ export default {
 
     border-radius: 4px;
 
+    @media screen and (min-width: 900px) {
+        position: sticky;
+        top: 20px;
+
+        grid-template-columns: 220px !important;
+    }
+
     @media screen and (max-width: 900px) {
         position: static;
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr max-content;
         grid-template-rows: max-content max-content;
         grid-template-areas: "avatar links"
                             "bio bio";
 
         justify-self: flex-start;
-        row-gap: 10px;
+        column-gap: 0px;
+        row-gap: 0px;
 
         width: 100%;
 
         &-avatar {
-            width: 80%;
+            width: 100%;
             height: auto !important;
         }
 
         &-bio {
             align-self: center;
+        }
+    }
+
+    @media screen and (min-width: 550px) and (max-width: 900px) {
+        position: static;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: max-content;
+        grid-template-areas: "avatar bio links";
+
+        &-bio-links {
+            justify-content: center;
+        }
+    }
+
+    @media screen and (min-width: 0px) and (max-width: 400px), (min-width: 900px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 120px max-content max-content;
+        grid-template-areas: "avatar"
+                            "bio"
+                            "links";
+
+        &-avatar {
+            width: auto !important;
+            height: 100% !important;
         }
     }
 
@@ -80,7 +103,12 @@ export default {
         justify-self: center;
         align-self: center;
 
-        height: 80%;
+        width: 80%;
+        height: auto;
+
+        max-width: 200px;
+
+        padding: 5px;
 
         border-radius: 400px;
     }
