@@ -47,9 +47,10 @@ export default {
     @media screen and (max-width: 900px) {
         position: static;
 
-        grid-template-columns: 120px 1fr 120px;
-        grid-template-rows: max-content;
-        grid-template-areas: "avatar bio links";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content max-content;
+        grid-template-areas: "avatar links"
+                            "bio bio";
 
         justify-self: flex-start;
         row-gap: 10px;
