@@ -15,7 +15,7 @@
 import WindowsIcon from "~/assets/icons/windows.svg";
 import LinuxIcon from "~/assets/icons/linux.svg";
 
-const version = "2.2.9";
+const version = "2.3.0";
 
 export default {
     components: {
