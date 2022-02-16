@@ -14,9 +14,9 @@
                 "name": "Vue.js"
             },
             {
-                "image": "nodejs.png",
+                "image": "Node.js.png",
                 "color": "#68A063",
-                "name": "NodeJS"
+                "name": "Node.js"
             },
             {
                 "image": "scss.png",

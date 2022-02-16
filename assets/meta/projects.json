@@ -15,12 +15,12 @@
         "id": "EasyVK AudioAPI",
         "image": "package.png",
         "to": "https://github.com/PurpleHorrorRus/EasyVK-AudioAPI",
-        "description": "EasyVK AudioAPI - Библиотека с открытым исходным кодом, реализующая неофициальный Audio API социальной сети ВКонтакте. Используется в качестве ядра в Meridius. Поддерживает авторизацию с помощью логина и пароля, работает с cookies и запросами на сервера социальной сети, имитируя браузер.\n\nТехнологии: NodeJS, Jest\nПаттерны: Single responsibility, Dependency inversion"
+        "description": "EasyVK AudioAPI - Библиотека с открытым исходным кодом, реализующая неофициальный Audio API социальной сети ВКонтакте. Используется в качестве ядра в Meridius. Поддерживает авторизацию с помощью логина и пароля, работает с cookies и запросами на сервера социальной сети, имитируя браузер.\n\nТехнологии: Node.js, Jest\nПаттерны: Single responsibility, Dependency inversion"
     },
     {
         "id": "simple-helix-api",
         "image": "package.png",
         "to": "https://github.com/PurpleHorrorRus/simple-helix-api",
-        "description": "simple-helix-api - Библиотека с открытым исходным кодом, необходимая для простой инициализации и работы с API стриминговой платформы Twitch. Имеет более 200 скачиваний на npm.\n\nТехнологии: NodeJS, Jest\nПаттерны: Single responsibility"
+        "description": "simple-helix-api - Библиотека с открытым исходным кодом, необходимая для простой инициализации и работы с API стриминговой платформы Twitch. Имеет более 200 скачиваний на npm.\n\nТехнологии: Node.js, Jest\nПаттерны: Single responsibility, Dependency inversion"
     }
 ]
