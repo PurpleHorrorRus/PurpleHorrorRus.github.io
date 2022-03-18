@@ -1,73 +1,57 @@
 <template>
     <div id="token-page">
-        <div id="token-page-container">
-            <span id="token-page-container-label">
-                Ваш Token находится в этом поле. Скопируйте его и вставьте в приложение.
-            </span>
-            
-            <div id="token-page-container-field">
-                <span id="token-page-container-field-token" v-text="token" />
-                <SolidButton v-tooltip="tooltip" :disabled="copied" @click.native="copy">
-                    <CopyIcon v-if="!copied" class="icon" />
-                    <CheckIcon v-else class="icon" />
-                </SolidButton>
-            </div>
+        <Field v-if="type === 'token'" :name="'Access Token'" :value="value" />
+        <div v-else id="token-page-code">
+            <Field :name="'Code'" :value="value.code" />
+            <Field :name="'Refresh token'" :value="value.refresh_token" />
         </div>
     </div>
 </template>
 
 <script>
-import SolidButton from "~/components/Buttons/SolidButton";
-
-import CopyIcon from "~/assets/icons/token/copy.svg";
-import CheckIcon from "~/assets/icons/token/check.svg";
+import Field from "~/components/Token/Field";
 
 const tokenRegex = [
     /access_token=([^&]+)/
 ];
 
-export default {
-    components: { 
-        SolidButton,
+const codeRegex = {
+    code: /code=([^&]+)/,
+    refresh_token: /refresh_token=([^&]+)/
+};
 
-        CopyIcon,
-        CheckIcon
+export default {
+    components: {
+        Field
     },
+
     layout: "empty",
+    
     data: () => ({
-        token: "",
-        copied: false
+        value: "",
+        type: "token"
     }),
-    computed: {
-        tooltip() {
-            return !this.copied 
-                ? "Скопировать" 
-                : "Скопировано";
-        }
-    },
-    mounted() {
+
+    created() {
         for (const regex of tokenRegex) {
             if (regex.test(window.location.href)) {
-                this.token = window.location.href.match(regex)[1];
-                break;
+                this.value = window.location.href.match(regex)[1];
+                return;
             }
 
             if (regex.test(window.location.hash)) {
-                this.token = window.location.hash.match(regex)[1];
-                break;
+                this.value = window.location.hash.match(regex)[1];
+                return;
             }
         }
-    },
-    methods: {
-        async copy() {
-            if (this.token.length > 0 && !this.copied) {
-                navigator.clipboard.writeText(this.token);
-                this.copied = true;
-                
-                setTimeout(() => {
-                    this.copied = false;
-                }, 4000);
-            }
+        
+        const href = window.location.href;
+        if (codeRegex.code.test(href)) {
+            this.type = "code";
+            this.value = { 
+                code: href.match(codeRegex.code)[1], 
+                refresh_token: href.match(codeRegex.refresh_token)[1]
+            };
         }
     }
 };
@@ -78,45 +62,19 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     width: 100%;
     height: 100%;
 
     background: var(--primary);
 
-    &-container {
+    &-code {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         row-gap: 10px;
-
-        max-width: 400px;
-
-        padding: 15px;
-
-        background: #333333;
-        border-radius: 4px;
-
-        &-field {
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
-
-            width: 100%;
-
-            &-token {
-                width: 100%;
-                
-                padding: 10px;
-
-                background: var(--backdrop);
-                border: 2px solid #ffffff;
-                border-radius: 4px;
-
-                user-select: text;
-            }
-        }
     }
 }
 </style>
