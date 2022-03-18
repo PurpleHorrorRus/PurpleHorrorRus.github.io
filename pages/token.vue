@@ -1,10 +1,7 @@
 <template>
     <div id="token-page">
         <Field v-if="type === 'token'" :name="'Access Token'" :value="value" />
-        <div v-else id="token-page-code">
-            <Field :name="'Code'" :value="value.code" />
-            <Field :name="'Refresh token'" :value="value.refresh_token" />
-        </div>
+        <Field v-else :name="'Code'" :value="value" />
     </div>
 </template>
 
@@ -15,10 +12,7 @@ const tokenRegex = [
     /access_token=([^&]+)/
 ];
 
-const codeRegex = {
-    code: /code=([^&]+)/,
-    refresh_token: /refresh_token=([^&]+)/
-};
+const codeRegex = /code=([^&]+)/;
 
 export default {
     components: {
@@ -45,13 +39,9 @@ export default {
             }
         }
         
-        const href = window.location.href;
-        if (codeRegex.code.test(href)) {
+        if (codeRegex.test(window.location.href)) {
             this.type = "code";
-            this.value = { 
-                code: href.match(codeRegex.code)[1], 
-                refresh_token: href.match(codeRegex.refresh_token)[1]
-            };
+            this.value = window.location.href.match(codeRegex)[1];
         }
     }
 };
@@ -68,13 +58,5 @@ export default {
     height: 100%;
 
     background: var(--primary);
-
-    &-code {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        row-gap: 10px;
-    }
 }
 </style>
