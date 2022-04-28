@@ -12,17 +12,14 @@
 </template>
 
 <script>
-import WindowsIcon from "~/assets/icons/windows.svg";
-import LinuxIcon from "~/assets/icons/linux.svg";
-
 const version = "2.4.8";
 
 export default {
     components: {
-        WindowsIcon,
-        LinuxIcon
+        WindowsIcon: () => import("~/assets/icons/windows.svg"),
+        LinuxIcon: () => import("~/assets/icons/linux.svg")
     },
-    
+
     methods: {
         link(ext) {
             // eslint-disable-next-line max-len
