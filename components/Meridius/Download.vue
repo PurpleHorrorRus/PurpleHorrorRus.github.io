@@ -12,7 +12,7 @@
 </template>
 
 <script>
-const version = "2.4.13";
+const tagsLink = "https://api.github.com/repos/PurpleHorrorRus/Meridius/tags";
 
 export default {
     components: {
@@ -20,14 +20,24 @@ export default {
         LinuxIcon: () => import("~/assets/icons/linux.svg")
     },
 
+    data: () => ({
+        version: "0.0.0"
+    }),
+
     computed: {
         links() {
             return {
                 // eslint-disable-next-line max-len
-                windows: `https://github.com/PurpleHorrorRus/Meridius/releases/download/v${version}/meridius-${version}.exe`,
+                windows: `https://github.com/PurpleHorrorRus/Meridius/releases/download/v${this.version}/meridius-${this.version}.exe`,
                 flathub: "https://flathub.org/apps/details/io.github.purplehorrorrus.Meridius"
             };
         }
+    },
+
+    async created() {
+        const response = await fetch(tagsLink);
+        const tags = await response.json();
+        this.version = tags[0].name.replace("v", "");
     }
 };
 </script>
