@@ -1,18 +1,18 @@
 <template>
     <div id="download-icons">
         <span id="download-icons-label" v-text="'Скачать: '" />
-        <a :href="link('exe')">
+        <a :href="links.windows">
             <WindowsIcon id="download-icons-windows" class="icon" />
         </a>
 
-        <a :href="link('deb')">
+        <a :href="links.flathub">
             <LinuxIcon id="download-icons-linux" class="icon" />
         </a>
     </div>
 </template>
 
 <script>
-const version = "2.4.12";
+const version = "2.4.13";
 
 export default {
     components: {
@@ -20,10 +20,13 @@ export default {
         LinuxIcon: () => import("~/assets/icons/linux.svg")
     },
 
-    methods: {
-        link(ext) {
-            // eslint-disable-next-line max-len
-            return `https://github.com/PurpleHorrorRus/Meridius/releases/download/v${version}/meridius-${version}.${ext}`;
+    computed: {
+        links() {
+            return {
+                // eslint-disable-next-line max-len
+                windows: `https://github.com/PurpleHorrorRus/Meridius/releases/download/v${version}/meridius-${version}.exe`,
+                flathub: "https://flathub.org/apps/details/io.github.purplehorrorrus.Meridius"
+            };
         }
     }
 };
