@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-    ssr: false,
+    ssr: true,
     target: "static",
     telemetry: false,
     router: {
