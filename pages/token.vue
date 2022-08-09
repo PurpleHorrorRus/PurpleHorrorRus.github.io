@@ -6,8 +6,6 @@
 </template>
 
 <script>
-import Field from "~/components/Token/Field";
-
 const tokenRegex = [
     /access_token=([^&]+)/
 ];
@@ -16,7 +14,7 @@ const codeRegex = /code=([^&]+)/;
 
 export default {
     components: {
-        Field
+        Field: () => import("~/components/Token/Field")
     },
 
     layout: "empty",
@@ -27,6 +25,10 @@ export default {
     }),
 
     created() {
+        if (!process.client) {
+            return false;
+        }
+
         for (const regex of tokenRegex) {
             if (regex.test(window.location.href)) {
                 this.value = window.location.href.match(regex)[1];
