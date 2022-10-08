@@ -48,11 +48,12 @@ export default {
 
 <style lang="scss">
 .project {
+    flex: 0 0 49.5%;
+
     display: flex;
     flex-direction: column;
     gap: 5px;
-
-    width: 48%;
+    
     height: max-content;
 
     @media screen and (max-width: 900px) {

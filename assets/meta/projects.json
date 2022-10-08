@@ -25,14 +25,14 @@
     },
     {
         "id": "simple-helix-api",
-        "image": "package.png",
+        "image": "simple-helix-api.png",
         "to": "https://github.com/PurpleHorrorRus/simple-helix-api",
-        "description": "simple-helix-api - Библиотека с открытым исходным кодом, необходимая для простой инициализации и работы с API стриминговой платформы Twitch. Имеет более 200 скачиваний на npm.\n\nТехнологии: Node.js, Jest\nПаттерны: Single responsibility, Dependency inversion"
+        "description": "Simple Helix API - Библиотека с открытым исходным кодом, необходимая для простой инициализации и работы с API стриминговой платформы Twitch. Имеет более 200 скачиваний на npm.\n\nТехнологии: Node.js, Jest\nПаттерны: Single responsibility, Dependency inversion"
     },
     {
         "id": "simple-trovo-api",
-        "image": "package.png",
+        "image": "simple-trovo-api.png",
         "to": "https://github.com/PurpleHorrorRus/simple-helix-api",
-        "description": "simple-trovo-api - Библиотека с открытым исходным кодом, необходимая для простой инициализации и работы с API стриминговой платформы Trovo.\n\nТехнологии: Node.js, TypeScript, Jest\nПаттерны: Single responsibility, Dependency inversion"
+        "description": "Simple Trovo API - Библиотека с открытым исходным кодом, необходимая для простой инициализации и работы с API стриминговой платформы Trovo.\n\nТехнологии: Node.js, Typescript, Jest\nПаттерны: Single responsibility, Dependency inversion"
     }
 ]
