@@ -14,23 +14,15 @@
 
 <script>
 const birthday = new Date("March 20, 1998");
-const birthdayDay = birthday.getDate();
-const birthdayMonth = birthday.getMonth() + 1;
-const birthdayYear = birthday.getFullYear();
+const ageDifMs = Date.now() - birthday.getTime();
+const ageDate = new Date(ageDifMs);
 
 export default {
     computed: {
         age() {
-            const date = new Date();
-            const month = date.getMonth() + 1;
-            const day = date.getDate();
-            return (
-                date.getFullYear() -
-                (month >= birthdayMonth && day >= birthdayDay
-                    ? birthdayYear
-                    : birthdayYear + 1)
-            );
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
         },
+
         agesString() {
             const agesDigits = String(this.age).split("");
             const lastDigit = Number(agesDigits[agesDigits.length - 1]);
