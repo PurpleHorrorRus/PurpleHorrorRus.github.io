@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss">
 .project {
-    flex: 0 0 49.5%;
+    flex: 0 0 49%;
 
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@ export default {
     height: max-content;
 
     @media screen and (max-width: 900px) {
-        width: 100%;
+        flex: 0 0 100%;
     }
 
     &-image {
