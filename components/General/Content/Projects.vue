@@ -27,6 +27,7 @@ export default {
         Category,
         Project
     },
+
     data: () => ({
         projects
     })
@@ -37,7 +38,9 @@ export default {
 #index-page-projects {
     &-list {
         display: flex;
-        column-gap: 10px;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
 
         margin-top: 10px;
 
@@ -45,9 +48,8 @@ export default {
         overflow-y: hidden;
 
         @media screen and (max-width: 900px) {
+            flex-direction: column;
             row-gap: 20px;
-
-            flex-wrap: wrap;
         }
     }
 }

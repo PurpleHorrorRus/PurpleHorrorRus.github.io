@@ -6,6 +6,7 @@
                 class="project-image"
             />
         </a>
+
         <span
             class="project-description"
             :class="{ canExpand }"
@@ -16,7 +17,7 @@
 </template>
 
 <script>
-const maxLen = 200;
+const maxLen = 302;
 
 export default {
     props: {
@@ -25,17 +26,19 @@ export default {
             required: true
         }
     },
+
     data: () => ({
         expanded: false
     }),
+
     computed: {
         formattedDescription() {
             const formatted = this.project.description.replaceAll("\n", "<br />");
-            
-            return this.expanded
+            return this.expanded || !this.canExpand
                 ? formatted
                 : formatted.substring(0, maxLen) + "...";
         },
+
         canExpand() {
             return this.project.description.length > maxLen;
         }
@@ -47,13 +50,13 @@ export default {
 .project {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+    gap: 5px;
 
-    width: 50%;
+    width: 48%;
     height: max-content;
 
     @media screen and (max-width: 900px) {
-        width: 48%;
+        width: 100%;
     }
 
     &-image {
