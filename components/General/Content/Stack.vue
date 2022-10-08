@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import Category from "~/components/General/Category";
-import TechnologyCategory from "~/components/General/Technology/TechnologyCategory";
+import Category from "../Category.vue";
+import TechnologyCategory from "../Technology/TechnologyCategory.vue";
 
 import technologies from "~/assets/meta/technologies.json";
 
@@ -26,6 +26,7 @@ export default {
         Category,
         TechnologyCategory
     },
+
     data: () => ({
         technologies
     })

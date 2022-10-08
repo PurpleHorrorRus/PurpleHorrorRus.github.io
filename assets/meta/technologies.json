@@ -3,6 +3,11 @@
         "label": "Хорошо знаю",
         "technologies": [
             {
+                "image": "nodejs.png",
+                "color": "#68A063",
+                "name": "Node.js"
+            },
+            {
                 "image": "nuxt.png",
                 "color": "#41b883",
                 "name": "Nuxt.js",
@@ -14,14 +19,14 @@
                 "name": "Vue.js"
             },
             {
-                "image": "nodejs.png",
-                "color": "#68A063",
-                "name": "Node.js"
-            },
-            {
                 "image": "scss.png",
                 "color": "#cd6799",
                 "name": "SCSS"
+            },
+            {
+                "image": "webpack.png",
+                "color": "#8ed5fa",
+                "name": "Webpack"
             },
             {
                 "image": "brush.png",
@@ -52,6 +57,11 @@
                 "image": "jquery.png",
                 "color": "#0769ad",
                 "name": "jQuery"
+            },
+            {
+                "image": "pug.png",
+                "color": "#e9c79f",
+                "name": "PUG"
             },
             {
                 "image": "java.png",
@@ -157,6 +167,11 @@
                 "image": "fork.png",
                 "color": "#058dc6",
                 "name": "Fork"
+            },
+            {
+                "image": "figma.png",
+                "color": "#1abcfe",
+                "name": "Figma"
             },
             {
                 "image": "photoshop.png",
