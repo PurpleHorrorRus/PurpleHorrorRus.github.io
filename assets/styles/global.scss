@@ -97,4 +97,8 @@ a {
     fill: var(--text);
 
     transition: fill .2s ease-in-out;
+
+    path {
+        transition: fill .2s ease-in-out;
+    }
 }

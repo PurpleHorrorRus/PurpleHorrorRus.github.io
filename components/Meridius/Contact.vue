@@ -1,23 +1,16 @@
 <template>
     <div id="contact">
-        <span id="contact-label" v-text="'Обратная связь с разработчиком:'" />
-        <a href="https://vk.com/id529592613">
-            <VKIcon id="vk-icon" class="icon" />
-        </a>
-        <a href="https://github.com/PurpleHorrorRus">
-            <GithubIcon id="github-icon" class="icon" />
+        <span id="contact-label" v-text="'Чат поддержки:'" />
+        <a href="https://discord.gg/R6gKtbnEVj">
+            <DiscordIcon id="discord-icon" class="icon" />
         </a>
     </div>
 </template>
 
 <script>
-import VKIcon from "~/assets/icons/vk.svg";
-import GithubIcon from "~/assets/icons/github.svg";
-
 export default {
     components: {
-        VKIcon,
-        GithubIcon
+        DiscordIcon: () => import("~/assets/icons/meridius/discord.svg")
     }
 };
 </script>
@@ -48,21 +41,13 @@ export default {
             cursor: pointer;
         }
 
-        &#vk-icon {
-            &:hover {
-                fill: #0077FF;
+        &#discord-icon {
+            path {
+                fill: #6d6d6d;
             }
-        }
 
-        &#github-icon {
-            &:hover {
-                fill: #ffffff;
-            }
-        }
-
-        &#twitch-icon {
-            &:hover {
-                fill: #6441a5;
+            &:hover path {
+                fill: #5865F2;
             }
         }
     }
