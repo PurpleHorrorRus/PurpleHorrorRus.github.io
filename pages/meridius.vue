@@ -137,6 +137,8 @@ export default {
             #MeridiusScreenshot {
                 width: 40%;
 
+                padding: 20px;
+
                 border-radius: 8px;
 
                 @media screen and (orientation: portrait) {
