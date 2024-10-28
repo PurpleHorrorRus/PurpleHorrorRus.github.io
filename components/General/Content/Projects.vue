@@ -1,11 +1,5 @@
 <template>
     <Category id="index-page-projects" :label="'Проекты'">
-        <p class="category-text">
-            Здесь отображены личные проекты, которые Я разрабатываю и
-            поддерживаю. Ещё больше проектов можно найти на GitHub. Нажмите на
-            описание, чтобы развернуть его.
-        </p>
-
         <div id="index-page-projects-list">
             <Project
                 v-for="project of projects"
