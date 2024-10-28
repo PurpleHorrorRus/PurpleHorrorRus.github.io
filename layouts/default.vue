@@ -1,24 +1,17 @@
 <template>
     <div id="default-layout" class="layout">
-        <Information />
         <nuxt />
     </div>
 </template>
 
 <script>
-import Information from "~/components/General/Information";
-
-export default {
-    components: {
-        Information
-    }
-};
+export default {};
 </script>
 
 <style lang="scss">
 #default-layout {
     display: grid;
-    grid-template-columns: 20% 60%;
+    grid-template-columns: 1fr;
     grid-template-rows: max-content max-content;
     grid-template-areas: "information page"
                     "information page";
